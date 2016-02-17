@@ -1,0 +1,59 @@
+/*Main CSS started*/
+.navbar
+{
+    background-color: #e1e8f0 ;
+
+}
+
+
+.navbar-brand img
+{
+    padding: 0;
+    margin: 0;
+}
+
+.logo
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.navbar-brand
+{
+    height: 100px !important;
+    width: 100px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.top-nav-collapse .navbar-brand
+{
+    width: 70px;
+    height: 70px;
+    top:10px;
+}
+
+.nav2 ul
+{
+    float: right !important;
+
+
+}
+
+.nav2 ul li a
+{
+    /*color: #1d2120 !important;*/
+}
+hr
+{
+	
+	height: 2px;
+	background-color: #efefef;
+}
+pre {
+    white-space: pre-wrap;
+}
+#date li:hover
+{
+	text-decoration: underline;
+}
