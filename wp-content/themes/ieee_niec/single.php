@@ -33,7 +33,7 @@
     <?php endwhile; ?>
   		<div class="col-sm-3" style="background-color:lavenderb;height:800px; margin-left:2%;margin-top:8%">
   			<h3>Recent activites</h3><hr>
-  			<div class="row">
+  			<!--<div class="row">
   				<div class="col-sm-5"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/new2.png" class="img-responsive"></a></div>
   				<div class="col-sm-7">
   					<p style="font-size:11px;">A workshop on website design was held on 7th, 8th and 9th of September, 2015 by
@@ -58,7 +58,28 @@
                         IEEE-NIEC’s prestigious Web Development team
                     </p>
   				</div>
-  			</div>
+  			</div>-->
+        <?php
+          $args=array(
+            'numberposts'=>3
+          );
+          $posts_recent=get_posts($args);
+          foreach($posts_recent as $post)
+          {
+            setup_postdata($post);
+            echo '<div class="row">';
+            echo '<div class="col-sm-5"><a href="#"><img src="';
+            echo the_post_thumbnail_url();
+            echo '" class="img-responsive"></a></div>';
+            echo '<div class="col-sm-7">';
+            echo '<p style="font-size:11px;">';
+            echo the_excerpt();
+            echo '</p>';
+            echo '</div></div><hr>';
+
+          }
+          wp_reset_postdata();
+        ?>
 
   		</div>
 
